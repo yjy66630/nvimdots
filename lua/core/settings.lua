@@ -57,6 +57,8 @@ settings["disabled_plugins"] = {
 	-- 另一个LSP配置
 	"ray-x/navigator.lua",
 	"ray-x/guihua.lua",
+	-- 禁用，否则大文件会卡死
+	"andymass/vim-matchup",
 }
 
 -- Set it to false if you don't use nvim to open big files.
