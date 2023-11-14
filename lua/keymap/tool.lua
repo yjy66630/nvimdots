@@ -16,6 +16,9 @@ local plug_map = {
 	["n|<leader>nf"] = map_cr("NvimTreeFindFile"):with_noremap():with_silent():with_desc("filetree: Find file"),
 	["n|<leader>nr"] = map_cr("NvimTreeRefresh"):with_noremap():with_silent():with_desc("filetree: Refresh"),
 
+	-- ["n|p"] = map_cmd("lua require'nvim-tree.api'.node.navigate.parent()"):with_noremap():with_silent():with_desc("filetree: goto parent directory"),
+	-- ["n|P"] = "",
+
 	-- Plugin: sniprun
 	["v|<leader>r"] = map_cr("SnipRun"):with_noremap():with_silent():with_desc("tool: Run code by range"),
 	["n|<leader>r"] = map_cu([[%SnipRun]]):with_noremap():with_silent():with_desc("tool: Run code by file"),
@@ -203,7 +206,7 @@ local plug_map = {
 	['n|""'] = map_cr("lua require'nvim-peekup'.peekup_open()"):with_silent():with_noremap():with_desc("register: open interactive registe windows"),
 	
 	["n|<Leader>t"] = map_cr("TranslateW"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
-	["v|<Leader>t"] = map_cr("Translate"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+	["x|<Leader>t"] = map_cr("Translate"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 }
 
 bind.nvim_load_mapping(plug_map)

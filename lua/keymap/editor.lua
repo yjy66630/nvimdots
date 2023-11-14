@@ -20,10 +20,6 @@ local plug_map = {
 	["n|<leader>sl"] = map_cu("SessionLoad"):with_noremap():with_silent():with_desc("session: Load current"),
 	["n|<leader>sd"] = map_cu("SessionDelete"):with_noremap():with_silent():with_desc("session: Delete"),
 
-	-- Plugin: nvim-bufdel
-	-- 关闭当前buffer
-	["n|<A-q>"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),
-
 	-- Plugin: clever-f
 	["n|;"] = map_callback(function()
 		return et("<Plug>(clever-f-repeat-forward)")
@@ -142,6 +138,9 @@ local plug_map = {
 	["n|tn"] = map_cr("BufferLineCycleNext"):with_noremap():with_silent():with_desc("tab: Move to next tab"),
 	["n|tp"] = map_cr("BufferLineCyclePrev"):with_noremap():with_silent():with_desc("tab: Move to previous tab"),
 	["n|tc"] = map_cr("BufferLineCloseOthers"):with_noremap():with_silent():with_desc("tab: Only keep current tab"),
+	-- Plugin: nvim-bufdel
+	-- 关闭当前buffer
+	["n|tq"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),
 
 	["n|<Leader>yy"] = map_cr("%y<CR>"):with_noremap():with_silent():with_desc("yank the whole file"),
 	["n|<Leader>dd"] = map_cr("%d<CR>"):with_noremap():with_silent():with_desc("delete the whole file"),
