@@ -82,6 +82,14 @@ tool['tomasky/bookmarks.nvim'] = {
 	config = require('tool.bookmarks'),
 }
 
+tool['folke/todo-comments.nvim'] = {
+	lazy = true,
+	event = "BufReadPost",
+	dependencies = { "nvim-lua/plenary.nvim" },
+	config = require('tool.todo-comments'),
+}
+
+
 ----------------------------------------------------------------------
 --                        Telescope Plugins                         --
 ----------------------------------------------------------------------

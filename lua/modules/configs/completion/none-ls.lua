@@ -2,12 +2,20 @@ return function()
 	local null_ls = require("null-ls")
 	local btns = null_ls.builtins
 
+	---Return formatter args required by `extra_args`
+	---@param formatter_name string
+	---@return table|nil
+	local function formatter_args(formatter_name)
+		args = require("completion.formatters." .. formatter_name)
+		return args
+	end
+
 	-- Please set additional flags for the supported servers here
 	-- Don't specify any config here if you are using the default one.
 	local sources = {
 		btns.formatting.clang_format.with({
 			filetypes = { "c", "cpp" },
-			extra_args = require("completion.formatters.clang_format"),
+			extra_args = formatter_args("clang_format"),
 		}),
 		btns.formatting.prettier.with({
 			filetypes = {
@@ -28,7 +36,7 @@ return function()
 	}
 	require("modules.utils").load_plugin("null-ls", {
 		border = "rounded",
-		debug = false,
+		debug = true,
 		log_level = "warn",
 		update_in_insert = false,
 		sources = sources,
