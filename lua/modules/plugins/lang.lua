@@ -27,7 +27,7 @@ lang["chrisbra/csv.vim"] = {
 	lazy = true,
 	ft = "csv",
 }
-lang["yjy66630/cmake-tools.nvim"] = {
+lang["Civitasv/cmake-tools.nvim"] = {
 	lazy = true,
 	event = "CmdlineEnter",
 	config = require("lang.cmake-tools"),

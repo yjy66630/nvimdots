@@ -75,6 +75,13 @@ tool["gennaro-tedesco/nvim-peekup"] = {
 	config = require("tool.peekup"),
 }
 
+tool['tomasky/bookmarks.nvim'] = {
+	lazy = true,
+	after = "telescope.nvim",
+	event = "VimEnter",
+	config = require('tool.bookmarks'),
+}
+
 ----------------------------------------------------------------------
 --                        Telescope Plugins                         --
 ----------------------------------------------------------------------

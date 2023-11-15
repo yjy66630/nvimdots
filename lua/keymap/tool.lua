@@ -207,6 +207,8 @@ local plug_map = {
 	
 	["n|<Leader>t"] = map_cr("TranslateW"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 	["x|<Leader>t"] = map_cr("Translate"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+
+	["n|<Leader>fm"] = map_cr("Telescope bookmarks list"):with_noremap():with_silent():with_desc("find: bookmarks in project"),
 }
 
 bind.nvim_load_mapping(plug_map)

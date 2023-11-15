@@ -1,9 +1,9 @@
 return function() -- This file MUST return a function accepting no parameter and has no return value
 	  local opts = {
 	  cmake_command = "cmake", -- this is used to specify cmake command path
-	  cmake_generator = "Ninja",
+	  -- cmake_generator = "Ninja",
 	  cmake_regenerate_on_save = true, -- auto generate when save CMakeLists.txt
-	  cmake_generate_options = { "-G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=1" }, -- this will be passed when invoke `CMakeGenerate`
+	  cmake_generate_options = { "-DCMAKE_EXPORT_COMPILE_COMMANDS=1" }, -- this will be passed when invoke `CMakeGenerate`
 	  cmake_build_options = {"-j 14"}, -- this will be passed when invoke `CMakeBuild`
 	  -- support macro expansion:
 	  --       ${kit}

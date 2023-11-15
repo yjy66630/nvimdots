@@ -173,6 +173,7 @@ return function()
 			{ name = "buffer" },
 			{ name = "latex_symbols" },
 			{ name = "copilot" },
+    		{ name = 'omni' },
 			-- { name = "codeium" },
 			-- { name = "cmp_tabnine" },
 		},
@@ -181,5 +182,14 @@ return function()
 				hl_group = "Whitespace",
 			},
 		},
+		enabled = function()
+		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
+			or require("cmp_dap").is_dap_buffer()
+		end
 	})
+	cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
+		sources = {
+			{ name = "dap" },
+		}, 
+	}) 
 end
