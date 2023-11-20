@@ -63,7 +63,10 @@ completion["hrsh7th/nvim-cmp"] = {
 		{ "hrsh7th/cmp-buffer" },
 		{ "kdheepak/cmp-latex-symbols" },
 		{ "ray-x/cmp-treesitter", commit = "c8e3a74" },
-		{"rcarriga/cmp-dap"},
+		{
+          "rcarriga/cmp-dap",
+          config = require("completion.cmp-dap"),
+        },
 		-- { "tzachar/cmp-tabnine", build = "./install.sh", config = require("completion.tabnine") },
 		-- {
 		-- 	"jcdickinson/codeium.nvim",
@@ -75,6 +78,13 @@ completion["hrsh7th/nvim-cmp"] = {
 		-- },
 	},
 }
+
+completion["Fildo7525/pretty_hover"] = {
+	lazy = true,
+	event = "LspAttach",
+	config = require("completion.pretty_hover"),
+}
+
 if use_copilot then
 	completion["zbirenbaum/copilot.lua"] = {
 		lazy = true,

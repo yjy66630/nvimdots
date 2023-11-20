@@ -149,6 +149,18 @@ local plug_map = {
 	["x|X"] = map_cmd("<Plug>(Exchange)"):with_noremap():with_silent():with_desc("exchange: exchange two yanks"),
 	["n|<Leader>cxc"] = map_cmd("<Plug>(ExchangeClear)"):with_noremap():with_silent():with_desc("exchange: clear exchanges"),
 	["n|<Leader>cxx"] = map_cmd("<Plug>(ExchangeLine)"):with_noremap():with_silent():with_desc("exchange: exchange two lines"),
+    
+    ["n|w"] = map_cr("lua require('spider').motion('w')"):with_noremap():with_silent():with_desc("Spider-w"),
+    ["o|w"] = map_cr("lua require('spider').motion('w')"):with_noremap():with_silent():with_desc("Spider-w"),
+    ["x|w"] = map_cr("lua require('spider').motion('w')"):with_noremap():with_silent():with_desc("Spider-w"),
+    ["n|e"] = map_cr("lua require('spider').motion('e')"):with_noremap():with_silent():with_desc("Spider-e"),
+    ["o|e"] = map_cr("lua require('spider').motion('e')"):with_noremap():with_silent():with_desc("Spider-e"),
+    ["x|e"] = map_cr("lua require('spider').motion('e')"):with_noremap():with_silent():with_desc("Spider-e"),
+    ["n|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
+    ["o|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
+    ["x|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
+    
+
 }
 
 bind.nvim_load_mapping(plug_map)

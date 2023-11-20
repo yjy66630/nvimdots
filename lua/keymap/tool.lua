@@ -209,6 +209,8 @@ local plug_map = {
 	["x|<Leader>t"] = map_cr("Translate"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 
 	["n|<Leader>fm"] = map_cr("Telescope bookmarks list"):with_noremap():with_silent():with_desc("find: bookmarks in project"),
+    ["n|]t"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
+    ["n|[t"] = map_cr("lua require('todo-comments').jump_prev()"):with_noremap():with_silent():with_desc("Previous todo comment"),
 }
 
 bind.nvim_load_mapping(plug_map)

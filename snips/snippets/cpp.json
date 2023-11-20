@@ -43,5 +43,24 @@
         "#endif // $1"
     ],
     "description": "header file definitions"
-  }
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (auto ${1:i} : ${2:ranges}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Code snippet for range for"
+  },
+  "tem":{
+    "prefix": "tem",
+    "body": [
+      "template<typename ${1:Item}>",
+      "${2:return_value} ${3:function_name}{",
+      "\t$0",
+      "}"
+    ],
+    "description": "function template"
+  },
 }

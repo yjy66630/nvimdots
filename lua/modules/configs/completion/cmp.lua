@@ -69,6 +69,10 @@ return function()
 
 	local cmp = require("cmp")
 	require("modules.utils").load_plugin("cmp", {
+        enabled = function()
+		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
+			or require("cmp_dap").is_dap_buffer()
+		end,
 		preselect = cmp.PreselectMode.Item,
 		window = {
 			completion = {
@@ -106,6 +110,7 @@ return function()
 					latex_symbols = "[LTEX]",
 					luasnip = "[SNIP]",
 					spell = "[SPELL]",
+                    dap = "[DAP]",
 				}, {
 					__index = function()
 						return "[BTN]" -- builtin/unknown source names
@@ -166,14 +171,15 @@ return function()
 			{ name = "nvim_lua" },
 			{ name = "luasnip" },
 			{ name = "path" },
-			{ name = "treesitter" },
-			{ name = "spell" },
-			{ name = "tmux" },
-			{ name = "orgmode" },
-			{ name = "buffer" },
+			-- { name = "treesitter" },
+			-- { name = "spell" },
+			-- { name = "tmux" },
+			-- { name = "orgmode" },
+			-- { name = "buffer" },
 			{ name = "latex_symbols" },
-			{ name = "copilot" },
-    		{ name = 'omni' },
+			-- { name = "copilot" },
+    		-- { name = 'omni' },
+            -- 以下两行原始配置也是被注释掉的
 			-- { name = "codeium" },
 			-- { name = "cmp_tabnine" },
 		},
@@ -182,12 +188,9 @@ return function()
 				hl_group = "Whitespace",
 			},
 		},
-		enabled = function()
-		return vim.api.nvim_buf_get_option(0, "buftype") ~= "prompt"
-			or require("cmp_dap").is_dap_buffer()
-		end
+		
 	})
-	cmp.setup.filetype({ "dap-repl", "dapui_watches" }, {
+	cmp.setup.filetype({ "dap-repl", "dapui_watches", "dapui_hover" }, {
 		sources = {
 			{ name = "dap" },
 		}, 

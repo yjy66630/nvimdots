@@ -31,7 +31,6 @@ function Lazy:load_plugins()
 		local list = {}
 		local plugins_list = vim.split(fn.glob(modules_dir .. "/plugins/*.lua"), "\n")
 		for _, f in ipairs(plugins_list) do
-			-- aggregate the plugins from `/plugins/*.lua` and `/user/plugins/*.lua` to a plugin list of a certain field for later `require` action.
 			-- current fields contains: completion, editor, lang, tool, ui
 			list[#list + 1] = f:find(modules_dir) and f:sub(#modules_dir - 6, -1)
 		end

@@ -278,7 +278,6 @@ function M.load_plugin(plugin_name, opts, vim_plugin, setup_callback)
 
 	-- Get the file name of the default config
 	local fname = debug.getinfo(2, "S").source:match("[^@/\\]*.lua$")
-	local ok, user_config = pcall(require, "user.configs." .. fname:sub(0, #fname - 4))
 	if not vim_plugin then
 		setup_callback = setup_callback or require(plugin_name).setup
 		setup_callback(opts)

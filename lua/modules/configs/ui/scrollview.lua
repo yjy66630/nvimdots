@@ -6,6 +6,7 @@ return function()
 		excluded_filetypes = { "NvimTree", "terminal", "nofile", "Outline" },
 		winblend = 0,
 		signs_on_startup = { "diagnostics", "folds", "marks", "search", "spell" },
+		diagnostics_severities = {vim.diagnostic.severity.ERROR, vim.diagnostic.severity.WARN, vim.diagnostic.severity.INFO},
 		diagnostics_error_symbol = icons.diagnostics.Error,
 		diagnostics_warn_symbol = icons.diagnostics.Warning,
 		diagnostics_info_symbol = icons.diagnostics.Information,

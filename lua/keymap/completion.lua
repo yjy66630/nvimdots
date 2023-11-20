@@ -28,7 +28,7 @@ function mapping.lsp(buf)
 		end):with_desc("lsp: Signature help"),
 		["n|gr"] = map_cr("Lspsaga rename"):with_buffer(buf):with_desc("lsp: Rename in file range"),
 		["n|gR"] = map_cr("Lspsaga rename ++project"):with_buffer(buf):with_desc("lsp: Rename in project range"),
-		["n|K"] = map_cr("Lspsaga hover_doc"):with_buffer(buf):with_desc("lsp: Show doc"),
+		["n|K"] = map_cr("lua require('pretty_hover').hover()"):with_buffer(buf):with_desc("lsp: Show doc"),
 		["nv|ga"] = map_cr("Lspsaga code_action"):with_buffer(buf):with_desc("lsp: Code action for cursor"),
 		["n|gD"] = map_cr("Glance definitions"):with_buffer(buf):with_desc("lsp: Preview definition"),
 		["n|gd"] = map_cr("Lspsaga goto_definition"):with_buffer(buf):with_desc("lsp: Goto definition"),
@@ -39,11 +39,6 @@ function mapping.lsp(buf)
 		["n|<leader>co"] = map_cr("Lspsaga outgoing_calls"):with_buffer(buf):with_desc("lsp: Show outgoing calls"),
 	}
 	bind.nvim_load_mapping(map)
-
-	local ok, user_mappings = pcall(require, "user.keymap.completion")
-	if ok and type(user_mappings.lsp) == "function" then
-		require("modules.utils.keymap").replace(user_mappings.lsp(buf))
-	end
 end
 
 return mapping

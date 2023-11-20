@@ -89,6 +89,19 @@ editor["wellle/targets.vim"] = {
 	lazy = true,
 	event = "BufRead",
 }
+editor["chrisgrieser/nvim-spider"] = {
+    lazy = true,
+	event = "CursorMoved",
+    opts = {
+              keys = {
+                { -- example for lazy-loading and keymap
+                    "e",
+                    "<cmd>lua require('spider').motion('e')<CR>",
+                    mode = { "n", "o", "x" },
+                },
+            },
+    },
+}
 
 
 ----------------------------------------------------------------------

@@ -98,6 +98,7 @@ function mapping.gitsigns(buf)
 		["ox|ih"] = bind.map_callback(function()
 			actions.text_object()
 		end):with_buffer(buf),
+		
 	}
 	bind.nvim_load_mapping(map)
 end

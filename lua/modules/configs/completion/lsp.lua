@@ -8,15 +8,11 @@ return function()
 	}
 	-- Setup lsps that are not supported by `mason.nvim` but supported by `nvim-lspconfig` here.
 	if vim.fn.executable("dart") == 1 then
-		local ok, _opts = pcall(require, "user.configs.lsp-servers.dartls")
-		if not ok then
-			_opts = require("completion.servers.dartls")
-		end
+		_opts = require("completion.servers.dartls")
 		local final_opts = vim.tbl_deep_extend("keep", _opts, opts)
 		nvim_lsp.dartls.setup(final_opts)
 	end
-
-	pcall(require, "user.configs.lsp")
-
+	
 	vim.api.nvim_command([[LspStart]]) -- Start LSPs
+	vim.lsp.set_log_level("off")
 end

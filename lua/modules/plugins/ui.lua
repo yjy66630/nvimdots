@@ -68,5 +68,9 @@ ui["edluffy/specs.nvim"] = {
 	event = "CursorMoved",
 	config = require("ui.specs"),
 }
+ui["sainnhe/edge"] = { 
+ 	lazy = true,
+	event = { "BufReadPost", "BufAdd", "BufNewFile" },
+ } 
 
 return ui

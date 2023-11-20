@@ -51,7 +51,7 @@ settings["diagnostics_level"] = "Warning"
 --- 加快启动速度
 settings["disabled_plugins"] = {
 	"nvim-treesitter/nvim-treesitter-context",
-	"hiphish/rainbow-delimiters.nvim",
+	-- "hiphish/rainbow-delimiters.nvim",
 	-- 使滚动平滑
 	"rhysd/accelerated-jk",
 	-- 另一个LSP配置
@@ -73,9 +73,10 @@ settings["load_big_files_faster"] = true
 settings["palette_overwrite"] = {}
 
 -- Set the colorscheme to use here.
--- Available values are: `catppuccin`, `catppuccin-latte`, `catppucin-mocha`, `catppuccin-frappe`, `catppuccin-macchiato`.
+-- Available values are: `catppuccin`, `catppuccin-latte`, `catppucin-mocha`, `catppuccin-frappe`, `catppuccin-macchiato`, `edge`.
 ---@type string
-settings["colorscheme"] = "catppuccin-mocha"
+
+settings["colorscheme"] = "edge"
 
 -- Set it to true if your terminal has transparent background.
 ---@type boolean
@@ -182,5 +183,4 @@ settings["neovide_config"] = {
 	cursor_vfx_particle_density = 5.0,
 	cursor_vfx_particle_lifetime = 1.2,
 }
-
 return settings
