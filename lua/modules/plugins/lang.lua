@@ -20,9 +20,15 @@ lang["Saecki/crates.nvim"] = {
 }
 lang["iamcco/markdown-preview.nvim"] = {
 	lazy = true,
+	cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
+  build = "cd app && yarn install",
+  init = function()
+    vim.g.mkdp_filetypes = { "markdown" }
+  end,
 	ft = "markdown",
 	build = ":call mkdp#util#install()",
 }
+
 lang["chrisbra/csv.vim"] = {
 	lazy = true,
 	ft = "csv",
