@@ -136,6 +136,19 @@ tool["mfussenegger/nvim-dap"] = {
 			config = require("tool.dap.dapui"),
 		},
 		{ "jay-babu/mason-nvim-dap.nvim" },
+		{
+		    "theHamsta/nvim-dap-virtual-text",
+		    dependencies = {
+				'mfussenegger/nvim-dap',
+				'nvim-treesitter/nvim-treesitter',
+		    },
+		    config = require("tool.dap.dap-virtual-text"),
+		},
+		{
+          "rcarriga/cmp-dap",
+          dependencies = { "nvim-cmp" },
+          config = require("completion.cmp-dap"),
+        },
 	},
 }
 
