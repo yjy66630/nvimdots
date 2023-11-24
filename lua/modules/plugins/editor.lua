@@ -139,10 +139,12 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 		},
 		{
 			"nvim-treesitter/nvim-treesitter-context",
+			event = {"VeryLazy"},
 			config = require("editor.ts-context"),
 		},
 		{
 			"JoosepAlviste/nvim-ts-context-commentstring",
+			event = {"VeryLazy"},
 			config = require("editor.ts-context-commentstring"),
 		},
 	},

@@ -22,7 +22,8 @@ completion["nvimdev/lspsaga.nvim"] = {
 }
 completion["dnlhc/glance.nvim"] = {
 	lazy = true,
-	event = "LspAttach",
+-- 	event = "LspAttach",
+	event = {"VeryLazy"},
 	config = require("completion.glance"),
 }
 completion["stevearc/aerial.nvim"] = {
@@ -36,7 +37,8 @@ completion["joechrisellis/lsp-format-modifications.nvim"] = {
 }
 completion["jose-elias-alvarez/null-ls.nvim"] = {
 	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
+-- 	event = { "CursorHold", "CursorHoldI" },
+	event = {"VeryLazy"},
 	config = require("completion.none-ls"),
 	dependencies = {
 		"nvim-lua/plenary.nvim",

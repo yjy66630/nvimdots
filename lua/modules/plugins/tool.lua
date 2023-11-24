@@ -64,9 +64,10 @@ tool["gelguy/wilder.nvim"] = {
 	dependencies = { "romgrk/fzy-lua-native" },
 }
 
-tool["voldikss/vim-translator"] = {
+tool["uga-rosa/translate.nvim"] = {
 	lazy = true,
 	event = "BufRead",
+	config = require("tool.translate"),
 }
 
 tool["gennaro-tedesco/nvim-peekup"] = {

@@ -1,5 +1,6 @@
 local bind = require("keymap.bind")
 local map_cr = bind.map_cr
+local map_crn = bind.map_crn
 local map_cu = bind.map_cu
 local map_cmd = bind.map_cmd
 local map_callback = bind.map_callback
@@ -205,12 +206,11 @@ local plug_map = {
 	
 	['n|""'] = map_cr("lua require'nvim-peekup'.peekup_open()"):with_silent():with_noremap():with_desc("register: open interactive registe windows"),
 	
-	["n|<Leader>t"] = map_cr("TranslateW"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
-	["x|<Leader>t"] = map_cr("Translate"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+	["n|<Leader>t"] = map_crn("viw:Translate ZH -source=EN -comment"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+	["x|<Leader>t"] = map_cr("Translate ZH -source=EN -comment"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 
 	["n|<Leader>fm"] = map_cr("Telescope bookmarks list"):with_noremap():with_silent():with_desc("find: bookmarks in project"),
     ["n|]t"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
     ["n|[t"] = map_cr("lua require('todo-comments').jump_prev()"):with_noremap():with_silent():with_desc("Previous todo comment"),
 }
-
 bind.nvim_load_mapping(plug_map)

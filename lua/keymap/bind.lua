@@ -40,7 +40,13 @@ end
 ---@return map_rhs
 function rhs_options:map_cr(cmd_string)
 	self.cmd = (":%s<CR>"):format(cmd_string)
-	-- print(self.cmd)
+	return self
+end
+
+---@param cmd_string string
+---@return map_rhs
+function rhs_options:map_crn(cmd_string)
+	self.cmd = ("%s<CR>"):format(cmd_string)
 	return self
 end
 
@@ -114,6 +120,13 @@ local bind = {}
 function bind.map_cr(cmd_string)
 	local ro = rhs_options:new()
 	return ro:map_cr(cmd_string)
+end
+
+---@param cmd_string string
+---@return map_rhs
+function bind.map_crn(cmd_string)
+	local ro = rhs_options:new()
+	return ro:map_crn(cmd_string)
 end
 
 ---@param cmd_string string
