@@ -206,8 +206,8 @@ local plug_map = {
 	
 	['n|""'] = map_cr("lua require'nvim-peekup'.peekup_open()"):with_silent():with_noremap():with_desc("register: open interactive registe windows"),
 	
-	["n|<Leader>t"] = map_crn("viw:Translate ZH -source=EN -comment"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
-	["x|<Leader>t"] = map_cr("Translate ZH -source=EN -comment"):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+	["n|<Leader>t"] = map_crn("viw:Translate ZH -source=EN "):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
+	["x|<Leader>t"] = map_cr("Translate ZH -source=EN "):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 
 	["n|<Leader>fm"] = map_cr("Telescope bookmarks list"):with_noremap():with_silent():with_desc("find: bookmarks in project"),
     ["n|]t"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
