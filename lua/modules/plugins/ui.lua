@@ -72,6 +72,12 @@ ui["edluffy/specs.nvim"] = {
 	event = "CursorMoved",
 	config = require("ui.specs"),
 }
+ui["lukas-reineke/headlines.nvim"] = {
+	lazy = true,
+	event = "VeryLazy",
+	dependencies = "nvim-treesitter/nvim-treesitter",
+	config = require("ui.headlines"),
+}
 ui["sainnhe/edge"] = { 
  	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
