@@ -35,7 +35,7 @@ completion["joechrisellis/lsp-format-modifications.nvim"] = {
 	lazy = true,
 	event = "LspAttach",
 }
-completion["jose-elias-alvarez/null-ls.nvim"] = {
+completion["nvimtools/none-ls.nvim"] = {
 	lazy = true,
 -- 	event = { "CursorHold", "CursorHoldI" },
 	event = {"VeryLazy"},
@@ -52,7 +52,10 @@ completion["hrsh7th/nvim-cmp"] = {
 	dependencies = {
 		{
 			"L3MON4D3/LuaSnip",
-			dependencies = { "rafamadriz/friendly-snippets" },
+			dependencies = {
+				"rafamadriz/friendly-snippets",
+				"evesdropper/luasnip-latex-snippets.nvim",
+			},
 			config = require("completion.luasnip"),
 		},
 		{ "lukas-reineke/cmp-under-comparator" },
