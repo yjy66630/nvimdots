@@ -77,5 +77,10 @@ ui["sainnhe/edge"] = {
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
 	config = require("ui.edge"),
  } 
+ ui["folke/zen-mode.nvim"] = {
+ 	lazy = true,
+	event = { "BufReadPost", "BufAdd", "BufNewFile" },
+	config = require("ui.zen-mode"),
+}
 
 return ui

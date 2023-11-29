@@ -221,5 +221,8 @@ local plug_map = {
 
     ["n|t]"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
     ["n|t["] = map_cr("lua require('todo-comments').jump_prev()"):with_noremap():with_silent():with_desc("Previous todo comment"),
+
+    -- zen mode
+	["n|<leader>zz"] = map_cr("ZenMode"):with_noremap():with_silent():with_desc("zen: ZenMode toggle"),
 }
 bind.nvim_load_mapping(plug_map)

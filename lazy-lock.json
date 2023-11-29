@@ -9,7 +9,6 @@
   "bigfile.nvim": { "branch": "main", "commit": "33eb067e3d7029ac77e081cfe7c45361887a311a" },
   "bookmarks.nvim": { "branch": "main", "commit": "e51023c89512aec01158be69510547e54b1a4948" },
   "bufferline.nvim": { "branch": "main", "commit": "9e8d2f695dd50ab6821a6a53a840c32d2067a78a" },
-  "catppuccin": { "branch": "refactor/syntax-highlighting", "commit": "9da4a01fd5e4eb092be8d3b34ec879e6d2acf601" },
   "clever-f.vim": { "branch": "master", "commit": "6a3ac5e3688598af9411ab741737f98c47370c22" },
   "cmake-tools.nvim": { "branch": "master", "commit": "4b965b5785776b6d258d57ce8fb7efa1a8170a7b" },
   "cmp-buffer": { "branch": "main", "commit": "3022dbc9166796b644a841a02de8dd1cc1d311fa" },
@@ -98,8 +97,8 @@
   "vim-exchange": { "branch": "master", "commit": "784d63083ad7d613aa96f00021cd0dfb126a781a" },
   "vim-fugitive": { "branch": "master", "commit": "46eaf8918b347906789df296143117774e827616" },
   "vim-go": { "branch": "master", "commit": "97327927551d519f8f035f6f12f7bca041fed665" },
-  "vim-illuminate": { "branch": "master", "commit": "3bd2ab64b5d63b29e05691e624927e5ebbf0fb86" },
   "vim-surround": { "branch": "master", "commit": "3d188ed2113431cf8dac77be61b842acb64433d9" },
   "which-key.nvim": { "branch": "main", "commit": "4433e5ec9a507e5097571ed55c02ea9658fb268a" },
-  "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" }
+  "wilder.nvim": { "branch": "master", "commit": "679f348dc90d80ff9ba0e7c470c40a4d038dcecf" },
+  "zen-mode.nvim": { "branch": "main", "commit": "50e2e2a36cc97847d9ab3b1a3555ba2ef6839b50" }
 }
