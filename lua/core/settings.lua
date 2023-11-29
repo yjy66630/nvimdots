@@ -118,6 +118,8 @@ settings["null_ls_deps"] = {
 	"clang_format",
 	"prettier",
 	"stylua",
+	"black",
+	"isort",
 }
 
 -- Set the Debug Adapter Protocol (DAP) clients that will be installed and configured during bootstrap here.
