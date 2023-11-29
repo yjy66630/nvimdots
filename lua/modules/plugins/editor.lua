@@ -62,11 +62,6 @@ editor["smoka7/hop.nvim"] = {
 	event = { "CursorHold", "CursorHoldI" },
 	config = require("editor.hop"),
 }
-editor["RRethy/vim-illuminate"] = {
-	lazy = true,
-	event = { "CursorHold", "CursorHoldI" },
-	config = require("editor.vim-illuminate"),
-}
 editor["romainl/vim-cool"] = {
 	lazy = true,
 	event = { "CursorMoved", "InsertEnter" },
@@ -116,7 +111,6 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 	-- event = "BufReadPost",
 	config = require("editor.treesitter"),
 	dependencies = {
-		{ "andymass/vim-matchup" },
 		{ "mfussenegger/nvim-treehopper" },
 		{ "nvim-treesitter/nvim-treesitter-textobjects" },
 		{
@@ -134,11 +128,6 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 		{
 			"hiphish/rainbow-delimiters.nvim",
 			config = require("editor.rainbow_delims"),
-		},
-		{
-			"nvim-treesitter/nvim-treesitter-context",
-			event = {"VeryLazy"},
-			config = require("editor.ts-context"),
 		},
 		{
 			"JoosepAlviste/nvim-ts-context-commentstring",

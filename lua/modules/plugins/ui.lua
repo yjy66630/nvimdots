@@ -11,12 +11,6 @@ ui["akinsho/bufferline.nvim"] = {
 	event = {"VeryLazy"},
 	config = require("ui.bufferline"),
 }
-ui["Jint-lzxy/nvim"] = {
-	lazy = false,
-	branch = "refactor/syntax-highlighting",
-	name = "catppuccin",
-	config = require("ui.catppuccin"),
-}
 ui["j-hui/fidget.nvim"] = {
 	lazy = true,
 	branch = "legacy",
@@ -81,6 +75,7 @@ ui["lukas-reineke/headlines.nvim"] = {
 ui["sainnhe/edge"] = { 
  	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
+	config = require("ui.edge"),
  } 
 
 return ui

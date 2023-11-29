@@ -133,7 +133,9 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("edit: Change current direrctory by zoxide"),
+
 	["n|<leader>fb"] = map_cu("Telescope buffers"):with_noremap():with_silent():with_desc("find: Buffer opened"),
+	["n|<leader>fh"] = map_cu("Telescope lsp_dynamic_workspace_symbols"):with_noremap():with_silent():with_desc("find: workspace symbols"),
 	["n|<leader>fs"] = map_cu("Telescope grep_string"):with_noremap():with_silent():with_desc("find: Current word"),
 	["n|<leader>fd"] = map_cu("Telescope persisted"):with_noremap():with_silent():with_desc("find: Session"),
 
@@ -210,7 +212,14 @@ local plug_map = {
 	["x|<Leader>t"] = map_cr("Translate ZH -source=EN "):with_noremap():with_silent():with_desc("translate: translate in cmdline"),
 
 	["n|<Leader>fm"] = map_cr("Telescope bookmarks list"):with_noremap():with_silent():with_desc("find: bookmarks in project"),
-    ["n|]t"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
-    ["n|[t"] = map_cr("lua require('todo-comments').jump_prev()"):with_noremap():with_silent():with_desc("Previous todo comment"),
+	["n|mm"] = map_cr("lua require 'bookmarks'.bookmark_toggle()"):with_silent():with_noremap():with_desc("bookmarks: add or remove bookmark at current line"),
+	["n|mi"] = map_cr("lua require 'bookmarks'.bookmark_ann()"):with_silent():with_noremap():with_desc("bookmarks: add or edit mark annotation at current line"),
+	["n|mc"] = map_cr("lua require 'bookmarks'.bookmark_clean()"):with_silent():with_noremap():with_desc("bookmarks: clean all marks in local buffer"),
+	["n|mn"] = map_cr("lua require 'bookmarks'.bookmark_next()"):with_silent():with_noremap():with_desc("bookmarks: jump to next mark in local buffer"),
+	["n|mp"] = map_cr("lua require 'bookmarks'.bookmark_prev()"):with_silent():with_noremap():with_desc("bookmarks: jump to previous mark in local buffer"),
+	["n|ml"] = map_cr("lua require 'bookmarks'.bookmark_list()"):with_silent():with_noremap():with_desc("bookmarks: show marked file list in quickfix window"),
+
+    ["n|t]"] = map_cr("lua require('todo-comments').jump_next()"):with_noremap():with_silent():with_desc("Next todo comment"),
+    ["n|t["] = map_cr("lua require('todo-comments').jump_prev()"):with_noremap():with_silent():with_desc("Previous todo comment"),
 }
 bind.nvim_load_mapping(plug_map)

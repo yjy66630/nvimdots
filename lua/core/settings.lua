@@ -48,17 +48,7 @@ settings["diagnostics_level"] = "Warning"
 -- Set the plugins to disable here.
 -- Example: "Some-User/A-Repo"
 ---@type string[]
---- 加快启动速度
 settings["disabled_plugins"] = {
-	"nvim-treesitter/nvim-treesitter-context",
-	-- "hiphish/rainbow-delimiters.nvim",
-	-- 使滚动平滑
-	"rhysd/accelerated-jk",
-	-- 另一个LSP配置
-	"ray-x/navigator.lua",
-	"ray-x/guihua.lua",
-	-- 禁用，否则大文件会卡死
-	"andymass/vim-matchup",
 }
 
 -- Set it to false if you don't use nvim to open big files.
