@@ -27,6 +27,7 @@ return {
 						E501 = "I",
 					},
 				},
+				pylint = {enabled = false},
 				flake8 = { enabled = false },
 				pyflakes = { enabled = false },
 				pycodestyle = { enabled = false },

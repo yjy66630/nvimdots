@@ -32,18 +32,12 @@ return function()
 				"markdown",
 			},
 		}),
-		btns.diagnostics.pylint.with({
-			diagnostics_postprocess = function(diagnostic)
-				diagnostic.code = diagnostic.message_id
-			end,
-			}),
-		btns.formatting.isort,
-		btns.formatting.black,
 		btns.formatting.rustfmt,
 	}
 	require("modules.utils").load_plugin("null-ls", {
 		border = "rounded",
 		debug = true,
+		fallback_severity = vim.diagnostic.severity.WARN,
 		log_level = "warn",
 		update_in_insert = false,
 		sources = sources,
