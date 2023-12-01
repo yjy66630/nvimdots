@@ -9,6 +9,22 @@ local debug_keymap = {
 		:with_noremap()
 		:with_nowait()
 		:with_desc("Evaluate expression under cursor"),
+	["nv|<Leader>dh"] = map_cmd("<Cmd>lua require('dap.ui.widgets').hover()<CR>")
+		:with_noremap()
+		:with_nowait()
+		:with_desc("Evaluate expression under cursor in hover windows"),
+	["nv|<Leader>dp"] = map_cmd("<Cmd>lua require('dap.ui.widgets').preview()<CR>")
+		:with_noremap()
+		:with_nowait()
+		:with_desc("Evaluate expression under cursor in preview windows"),
+	["nv|<Leader>df"] = map_cmd("<Cmd>lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').frames)<CR>")
+		:with_noremap()
+		:with_nowait()
+		:with_desc("alter dap stack in hover windows"),
+	["nv|<Leader>ds"] = map_cmd("<Cmd>lua require('dap.ui.widgets').centered_float(require('dap.ui.widgets').scopes)<CR>")
+		:with_noremap()
+		:with_nowait()
+		:with_desc("Evaluate all local variables in hover windows"),
 }
 
 function M.load_extras()
