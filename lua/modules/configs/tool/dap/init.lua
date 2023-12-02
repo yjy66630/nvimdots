@@ -36,7 +36,10 @@ return function()
 		"DapBreakpointCondition",
 		{ text = icons.dap.BreakpointCondition, texthl = "DapBreakpoint", linehl = "", numhl = "" }
 	)
-	vim.fn.sign_define("DapStopped", { text = icons.dap.Stopped, texthl = "DapStopped", linehl = "", numhl = "" })
+
+	vim.api.nvim_set_hl(0, "DapStoppedLinehl", { bg = "#555530" })
+
+	vim.fn.sign_define("DapStopped", { text = icons.dap.Stopped, texthl = "DapStopped", linehl = "DapStoppedLinehl", numhl = "" })
 	vim.fn.sign_define(
 		"DapBreakpointRejected",
 		{ text = icons.dap.BreakpointRejected, texthl = "DapBreakpoint", linehl = "", numhl = "" }
