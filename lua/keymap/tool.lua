@@ -188,12 +188,16 @@ local plug_map = {
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Run to cursor"),
-	["n|<leader>dl"] = map_callback(function()
+	["n|<leader>dd"] = map_callback(function()
 			require("dap").run_last()
 		end)
 		:with_noremap()
 		:with_silent()
 		:with_desc("debug: Run last"),
+	["n|<leader>dl"] = map_cr("lua require'osv'.run_this()")
+		:with_silent()
+		:with_noremap()
+		:with_desc("debug: debug plugin"),
 	["n|<leader>do"] = map_callback(function()
 			require("dap").repl.open()
 		end)

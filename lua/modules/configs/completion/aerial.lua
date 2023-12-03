@@ -1,4 +1,47 @@
 return function()
+	local kind_filter = {
+		default = {
+		"Class",
+		"Constructor",
+		"Enum",
+		"Field",
+		"Function",
+		"Interface",
+		"Method",
+		"Module",
+		"Namespace",
+		"Package",
+		"Property",
+		"Struct",
+		"Trait",
+		},
+		markdown = false,
+		help = false,
+		-- you can specify a different filter for each filetype
+		lua = {
+		"Class",
+		"Constructor",
+		"Enum",
+		"Field",
+		"Function",
+		"Interface",
+		"Method",
+		"Module",
+		"Namespace",
+		-- "Package", -- remove package since luals uses it for control flow structures
+		"Property",
+		"Struct",
+		"Trait",
+		},
+	}
+
+	---@type table<string, string[]>|false
+	local filter_kind = false
+	if kind_filter then
+		filter_kind = assert(vim.deepcopy(kind_filter))
+		filter_kind._ = filter_kind.default
+		filter_kind.default = nil
+	end
 	require("modules.utils").load_plugin("aerial", {
 		lazy_load = false,
 		backends = { "lsp", "markdown", "man" },
@@ -17,6 +60,12 @@ return function()
 			-- different buffer in the way of the preferred direction
 			-- Enum: prefer_right, prefer_left, right, left, float
 			default_direction = "prefer_right",
+			min_width = 20,
+			win_opts = {
+            winhl = "Normal:NormalFloat,FloatBorder:NormalFloat,SignColumn:SignColumnSB",
+            signcolumn = "yes",
+            statuscolumn = " ",
+          },
 		},
 		-- Keymaps in aerial window. Can be any value that `vim.keymap.set` accepts OR a table of keymap
 		-- options with a `callback` (e.g. { callback = function() ... end, desc = "", nowait = true })
@@ -105,5 +154,16 @@ return function()
 			["Operator"] = " ",
 			["TypeParameter"] = " ",
 		},
+		show_guides = true,
+		filter_kind = filter_kind,
+		guides = {
+          mid_item   = "├╴",
+          last_item  = "└╴",
+          nested_top = "│ ",
+          whitespace = "  ",
+        },
+        post_jump_cmd = "normal! zz",
+        close_on_select = true,
+
 	})
 end

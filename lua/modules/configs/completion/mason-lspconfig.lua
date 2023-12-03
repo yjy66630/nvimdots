@@ -22,13 +22,13 @@ M.setup = function()
 		update_in_insert = false,
 	})
 
-	if(diagnostics_level == "Error") then 
+	if(diagnostics_level == "Error") then
 		diagnostics_level = vim.diagnostic.severity.Error
-	elseif(diagnostics_level == "Warning") then 
+	elseif(diagnostics_level == "Warning") then
 		diagnostics_level = vim.diagnostic.severity.WARN
-	elseif(diagnostics_level == "Information") then 
+	elseif(diagnostics_level == "Information") then
 		diagnostics_level = vim.diagnostic.severity.INFO
-	elseif(diagnostics_level == "Hint") then 
+	elseif(diagnostics_level == "Hint") then
 		diagnostics_level = vim.diagnostic.severity.Hint
 	end
 

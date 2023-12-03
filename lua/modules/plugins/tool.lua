@@ -149,6 +149,11 @@ tool["mfussenegger/nvim-dap"] = {
           dependencies = { "nvim-cmp" },
           config = require("completion.cmp-dap"),
         },
+        {
+			"jbyuki/one-small-step-for-vimkind",
+			-- stylua: ignore
+			config = require("tool.dap.clients.lua"),
+        },
 	},
 }
 
