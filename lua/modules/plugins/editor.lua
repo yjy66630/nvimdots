@@ -97,6 +97,11 @@ editor["chrisgrieser/nvim-spider"] = {
             },
     },
 }
+editor["Badhi/nvim-treesitter-cpp-tools"] = {
+	lazy = true,
+	event = "BufReadPost",
+	config = require("editor.cpp-tools"),
+}
 ----------------------------------------------------------------------
 --                  :treesitter related plugins                    --
 ----------------------------------------------------------------------

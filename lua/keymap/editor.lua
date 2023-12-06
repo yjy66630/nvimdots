@@ -159,6 +159,9 @@ local plug_map = {
     ["n|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
     ["o|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
     ["x|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
+
+    ["n|gg"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
+    ["x|gg"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
     
 
 }
