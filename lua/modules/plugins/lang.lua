@@ -36,7 +36,8 @@ lang["chrisbra/csv.vim"] = {
 lang["Civitasv/cmake-tools.nvim"] = {
 	lazy = true,
 -- 	event = "CmdlineEnter",
-	event = {"VeryLazy"},
+	event = "CmdUndefined",
+-- 	event = {"VeryLazy"},
 	config = require("lang.cmake-tools"),
 }
 lang["CRAG666/code_runner.nvim"] = {
