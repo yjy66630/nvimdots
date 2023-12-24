@@ -8,6 +8,49 @@ return function()
 		return vim.api.nvim_replace_termcodes(str, true, true, true)
 	end
 
+	-- 通用智能注释插件
+	function smart_comment()
+
+		-- 判断光标是否在当前行的末尾
+		function is_cursor_at_end()
+			local current_line = vim.fn.getline('.')
+			local cursor_col = vim.fn.col('.')
+			local line_length = string.len(current_line)
+
+			return cursor_col == line_length
+		end
+		if not is_cursor_at_end() then
+			-- 光标不在当前行的末尾，插入一个换行符
+			vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("a<CR>", true, true, true), 'n', true)
+			return
+		end
+
+		-- 获取当前行文本
+		local line = vim.fn.getline(vim.fn.line('.'))
+
+		-- 获取当前编辑文件的后缀名
+		local file_extension = vim.fn.expand('%:e')
+
+		-- 获取当前行缩进
+		local indent = vim.fn.matchstr(line, '^\\s*')
+
+		-- 判断当前行是否以 '#' 开头
+		local is_hash
+		if file_extension == 'py' then
+			is_hash = vim.fn.match(line, '^\\s*#') > -1
+			new_line = is_hash and '# ' or ''
+		elseif file_extension == 'cc' or file_extension == 'c' or file_extension == 'h' or file_extension == 'cpp' then
+			is_hash = vim.fn.match(line, '^\\s*//') > -1
+			new_line = is_hash and '// ' or ''
+		end
+
+		-- 插入新行
+		vim.fn.append(vim.fn.line('.'), indent .. new_line)
+
+		-- 移动到新行
+		vim.api.nvim_feedkeys('jA', 'n', true)
+	end
+
 	local border = function(hl)
 		return {
 			{ "┌", hl },
@@ -135,7 +178,14 @@ return function()
 		},
 		-- You can set mappings if you want
 		mapping = cmp.mapping.preset.insert({
-			["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+-- 			["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+			["<CR>"] = cmp.mapping(function(fallback)
+				if cmp.visible() then
+					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
+				else
+					vim.fn.feedkeys(t("<ESC>:lua smart_comment()<CR>"))
+				end
+				end, { "i" }),
 			["<C-p>"] = cmp.mapping.select_prev_item(),
 			["<C-n>"] = cmp.mapping.select_next_item(),
 			["<C-d>"] = cmp.mapping.scroll_docs(-4),
