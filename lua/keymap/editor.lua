@@ -142,8 +142,8 @@ local plug_map = {
 	-- 关闭当前buffer
 	["n|tq"] = map_cr("BufDel"):with_noremap():with_silent():with_desc("buffer: Close current"),
 
-	["n|<Leader>yy"] = map_cr("%y<CR>"):with_noremap():with_silent():with_desc("yank the whole file"),
-	["n|<Leader>dd"] = map_cr("%d<CR>"):with_noremap():with_silent():with_desc("delete the whole file"),
+	["n|<Leader>yy"] = map_cmd("ggyG<C-o><UP><CR>"):with_noremap():with_silent():with_desc("yank the whole file"),  -- 复制全文，但复制完后需要向上挪动一行
+	["n|<Leader>dd"] = map_cmd("ggdG<CR>"):with_noremap():with_silent():with_desc("delete the whole file"),
 
 	["n|<Leader>cx"] = map_cmd("<Plug>(Exchange)"):with_noremap():with_silent():with_desc("exchange: exchange two yanks"),
 	["x|X"] = map_cmd("<Plug>(Exchange)"):with_noremap():with_silent():with_desc("exchange: exchange two yanks"),
@@ -160,8 +160,8 @@ local plug_map = {
     ["o|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
     ["x|b"] = map_cr("lua require('spider').motion('b')"):with_noremap():with_silent():with_desc("Spider-b"),
 
-    ["n|gg"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
-    ["x|gg"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
+    ["n|gi"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
+    ["x|gi"] = map_cr("TSCppDefineClassFunc"):with_noremap():with_silent():with_desc("generate: generate implementation according decleration"),
     
 
 }
