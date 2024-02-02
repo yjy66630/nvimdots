@@ -74,6 +74,7 @@
   "paint.nvim": { "branch": "main", "commit": "6ce64212804f425073c61ab0d9c2b034f0435260" },
   "persisted.nvim": { "branch": "main", "commit": "97bc6260fb85f3472d2f773dc6cc41f7d942a7a2" },
   "plenary.nvim": { "branch": "master", "commit": "55d9fe89e33efd26f532ef20223e5f9430c8b0c0" },
+  "pokemon.nvim": { "branch": "main", "commit": "50c618f88f1ee7cbd0e0d8194176b0d47f6f1c40" },
   "pretty_hover": { "branch": "master", "commit": "392f6f71c6526955fcf510d48930bce7864b6915" },
   "project.nvim": { "branch": "main", "commit": "8c6bad7d22eef1b71144b401c9f74ed01526a4fb" },
   "rainbow-delimiters.nvim": { "branch": "master", "commit": "35413f67fb918207a4acc4948ca9ccb75b6cf8d5" },
