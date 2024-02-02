@@ -48,8 +48,7 @@ settings["diagnostics_level"] = "Warning"
 -- Set the plugins to disable here.
 -- Example: "Some-User/A-Repo"
 ---@type string[]
-settings["disabled_plugins"] = {
-}
+settings["disabled_plugins"] = {}
 
 -- Set it to false if you don't use nvim to open big files.
 ---@type boolean
@@ -155,7 +154,7 @@ settings["treesitter_deps"] = {
 ---@type { font_name: string, font_size: number }
 settings["gui_config"] = {
 	font_name = "JetBrainsMono Nerd Font",
-	font_size = 12,
+	font_size = 14,
 }
 
 -- Set the options specific to `neovide` here.

@@ -178,14 +178,14 @@ return function()
 		},
 		-- You can set mappings if you want
 		mapping = cmp.mapping.preset.insert({
--- 			["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
-			["<CR>"] = cmp.mapping(function(fallback)
-				if cmp.visible() then
-					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
-				else
-					vim.fn.feedkeys(t("<ESC>:lua smart_comment()<CR>"))
-				end
-				end, { "i" }),
+			["<CR>"] = cmp.mapping.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace }),
+-- 			["<CR>"] = cmp.mapping(function(fallback)
+-- 				if cmp.visible() then
+-- 					cmp.confirm({ select = true, behavior = cmp.ConfirmBehavior.Replace })
+-- 				else
+-- 					vim.fn.feedkeys(t("<ESC>:lua smart_comment()<CR>"))
+-- 				end
+-- 				end, { "i" }),
 			["<C-p>"] = cmp.mapping.select_prev_item(),
 			["<C-n>"] = cmp.mapping.select_next_item(),
 			["<C-d>"] = cmp.mapping.scroll_docs(-4),
