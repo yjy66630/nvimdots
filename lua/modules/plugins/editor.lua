@@ -105,6 +105,11 @@ editor["Badhi/nvim-treesitter-cpp-tools"] = {
 ----------------------------------------------------------------------
 --                  :treesitter related plugins                    --
 ----------------------------------------------------------------------
+editor["JoosepAlviste/nvim-ts-context-commentstring"] = {
+	"JoosepAlviste/nvim-ts-context-commentstring",
+	event = {"VeryLazy"},
+	config = require("editor.ts-context-commentstring"),
+}
 editor["nvim-treesitter/nvim-treesitter"] = {
 	lazy = true,
 	build = function()
@@ -133,11 +138,6 @@ editor["nvim-treesitter/nvim-treesitter"] = {
 		{
 			"hiphish/rainbow-delimiters.nvim",
 			config = require("editor.rainbow_delims"),
-		},
-		{
-			"JoosepAlviste/nvim-ts-context-commentstring",
-			event = {"VeryLazy"},
-			config = require("editor.ts-context-commentstring"),
 		},
 	},
 }
