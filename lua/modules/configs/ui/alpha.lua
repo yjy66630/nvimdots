@@ -2,16 +2,24 @@ return function()
 	local dashboard = require("alpha.themes.dashboard")
 	require("modules.utils").gen_alpha_hl()
 
-	dashboard.section.header.val = {
-		   "                                                                               ",
-		   "                                                                               ",
-           "            ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z",
-           "            ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    ",
-           "            ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       ",
-           "            ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         ",
-           "            ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           ",
-           "            ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           ",
-	}
+	local pokemon = require('pokemon')
+	pokemon.setup({
+		number = '0039', -- 星之卡比
+-- 		number = '0025', -- 比卡丘
+		size = 'auto',
+	})
+	dashboard.section.header.val = pokemon.header()
+
+-- 	dashboard.section.header.val = {
+-- 		   "                                                                               ",
+-- 		   "                                                                               ",
+--            "            ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z",
+--            "            ██║     ██╔══██╗╚══███╔╝╚██╗ ██╔╝██║   ██║██║████╗ ████║      Z    ",
+--            "            ██║     ███████║  ███╔╝  ╚████╔╝ ██║   ██║██║██╔████╔██║   z       ",
+--            "            ██║     ██╔══██║ ███╔╝    ╚██╔╝  ╚██╗ ██╔╝██║██║╚██╔╝██║ z         ",
+--            "            ███████╗██║  ██║███████╗   ██║    ╚████╔╝ ██║██║ ╚═╝ ██║           ",
+--            "            ╚══════╝╚═╝  ╚═╝╚══════╝   ╚═╝     ╚═══╝  ╚═╝╚═╝     ╚═╝           ",
+-- 	}
 	dashboard.section.header.opts.hl = "AlphaHeader"
 
 	local function button(sc, txt, leader_txt, keybind, keybind_opts)

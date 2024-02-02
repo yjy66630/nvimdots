@@ -4,6 +4,7 @@ ui["goolord/alpha-nvim"] = {
 	lazy = true,
 	event = "BufWinEnter",
 	config = require("ui.alpha"),
+	dependencies = { { 'nvim-tree/nvim-web-devicons', 'ColaMint/pokemon.nvim' } }
 }
 ui["akinsho/bufferline.nvim"] = {
 	lazy = true,
