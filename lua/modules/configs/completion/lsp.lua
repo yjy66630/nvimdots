@@ -13,6 +13,18 @@ return function()
 		nvim_lsp.dartls.setup(final_opts)
 	end
 
+	vim.api.nvim_create_autocmd("LspAttach", {
+    group = vim.api.nvim_create_augroup("UserLspConfig", {}),
+    callback = function(args)
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client.server_capabilities.inlayHintProvider then
+            vim.lsp.inlay_hint.enable(args.buf, true)
+        end
+    end
+	})
+
+	vim.cmd [[hi LspInlayHint guifg=#d8d8d8 guibg=#3a3a3a]]
+
 	vim.api.nvim_command([[LspStart]]) -- Start LSPs
 	vim.lsp.set_log_level("off")
 end
