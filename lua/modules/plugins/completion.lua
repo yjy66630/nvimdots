@@ -54,7 +54,6 @@ completion["hrsh7th/nvim-cmp"] = {
 			"L3MON4D3/LuaSnip",
 			dependencies = {
 				"rafamadriz/friendly-snippets",
-				"evesdropper/luasnip-latex-snippets.nvim",
 			},
 			config = require("completion.luasnip"),
 		},

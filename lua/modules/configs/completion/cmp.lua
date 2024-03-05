@@ -83,11 +83,11 @@ return function()
 				-- require("cmp_tabnine.compare"),
 				compare.offset, -- Items closer to cursor will have lower priority
 				compare.exact,
+				compare.recently_used,
 				-- compare.scopes,
 				compare.lsp_scores,
 				compare.sort_text,
 				compare.score,
-				compare.recently_used,
 				-- compare.locality, -- Items closer to cursor will have higher priority, conflicts with `offset`
 				require("cmp-under-comparator").under,
 				compare.kind,
@@ -99,10 +99,10 @@ return function()
 			compare.offset, -- Items closer to cursor will have lower priority
 			compare.exact,
 			-- compare.scopes,
+			compare.recently_used,
 			compare.lsp_scores,
 			compare.sort_text,
 			compare.score,
-			compare.recently_used,
 			-- compare.locality, -- Items closer to cursor will have higher priority, conflicts with `offset`
 			require("cmp-under-comparator").under,
 			compare.kind,
@@ -141,6 +141,7 @@ return function()
 					string.format(" %s  %s", lspkind_icons[vim_item.kind] or icons.cmp.undefined, vim_item.kind or "")
 
 				vim_item.menu = setmetatable({
+					luasnip = "[SNIP]",
 					cmp_tabnine = "[TN]",
 					copilot = "[CPLT]",
 					buffer = "[BUF]",
@@ -151,7 +152,6 @@ return function()
 					tmux = "[TMUX]",
 					treesitter = "[TS]",
 					latex_symbols = "[LTEX]",
-					luasnip = "[SNIP]",
 					spell = "[SPELL]",
                     dap = "[DAP]",
 				}, {
@@ -217,9 +217,9 @@ return function()
 		},
 		-- You should specify your *installed* sources.
 		sources = {
+			{ name = "luasnip" },
 			{ name = "nvim_lsp", max_item_count = 350 },
 			{ name = "nvim_lua" },
-			{ name = "luasnip" },
 			{ name = "path" },
 			-- { name = "treesitter" },
 			-- { name = "spell" },
