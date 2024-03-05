@@ -42,7 +42,7 @@ return function()
 				["t"] = actions.jump_tab,
 				["c"] = actions.close_fold,
 				["o"] = actions.open_fold,
-				["[]"] = actions.enter_win("preview"), -- Focus preview window
+				["p"] = actions.enter_win("preview"), -- Focus preview window
 				["q"] = actions.close,
 				["Q"] = actions.close,
 				["<Esc>"] = actions.close,
@@ -57,7 +57,7 @@ return function()
 				["<C-c>t"] = actions.jump_tab,
 				["<C-p>"] = actions.previous_location,
 				["<C-n>"] = actions.next_location,
-				["[]"] = actions.enter_win("list"), -- Focus list window
+				["p"] = actions.enter_win("list"), -- Focus list window
 			},
 		},
 		hooks = {
