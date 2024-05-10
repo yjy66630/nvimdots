@@ -1,38 +1,15 @@
 <h1 align="center">
     nvimdots
     <br>
-    <a href="https://github.com/neovim/neovim/releases/tag/stable">
+    <a href="https://github.com/neovim/neovim/releases/tag/nightly">
     <img
         alt="NeoVim Version Capability"
-        src="https://img.shields.io/badge/Supports%20Nvim-v0.9-A6D895?style=for-the-badge&colorA=363A4F&logo=neovim&logoColor=D9E0EE">
-    </a>
-    <a href="https://github.com/ayamir/nvimdots/releases">
-    <img
-        alt="Release"
-        src="https://img.shields.io/github/v/release/ayamir/nvimdots.svg?style=for-the-badge&logo=github&color=F2CDCD&logoColor=D9E0EE&labelColor=363A4F">
-    </a>
-</h1>
-
-<p align="center">
-    <a href="https://github.com/ayamir/nvimdots/stargazers">
-    <img
-        alt="Stars"
-        src="https://img.shields.io/github/stars/ayamir/nvimdots?colorA=363A4F&colorB=B7BDF8&logo=adafruit&logoColor=D9E0EE&style=for-the-badge">
-    </a>
-    <a href="https://github.com/ayamir/nvimdots/issues">
-    <img
-        alt="Issues"
-        src="https://img.shields.io/github/issues-raw/ayamir/nvimdots?colorA=363A4f&colorB=F5A97F&logo=github&logoColor=D9E0EE&style=for-the-badge">
-    </a>
-    <a href="https://github.com/ayamir/nvimdots/contributors">
-    <img
-        alt="Contributors"
-        src="https://img.shields.io/github/contributors/ayamir/nvimdots?colorA=363A4F&colorB=B5E8E0&logo=git&logoColor=D9E0EE&style=for-the-badge">
+        src="https://img.shields.io/badge/SUPPORTS_NVIM-V0.10-green?style=for-the-badge&logo=neovim&logoColor=D9E0EE&labelColor=363A4F&color=A6D895">
     </a>
     <img
         alt="Code Size"
-        src="https://img.shields.io/github/languages/code-size/ayamir/nvimdots?colorA=363A4F&colorB=DDB6F2&logo=gitlfs&logoColor=D9E0EE&style=for-the-badge">
-</p>
+        src="https://img.shields.io/badge/CODE_SIZE-664KB-purple?style=for-the-badge&logo=gitlfs&logoColor=D9E0EE&labelColor=363A4F&color=DDB6F2">
+</h1>
 
 ## 🪷 Introduction
 
@@ -44,9 +21,8 @@ Branch info:
 
 | Branch | Supported neovim version |
 | :----: | :----------------------: |
-|  main  |     nvim 0.9 stable      |
-|  0.8   |         nvim 0.8         |
-|  0.7   |         nvim 0.7         |
+|  main  |       nvim 0.10 dev      |
+|  main   |         nvim 0.9        |
 
 </div>
 
@@ -69,16 +45,16 @@ Just run the following interactive bootstrap command, and you're good to go 👍
 - **Windows** _(Note: This script REQUIRES `pwsh` > `v7.1`)_
 
 ```pwsh
-Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.ps1'))
+Set-ExecutionPolicy Bypass -Scope Process -Force; Invoke-Expression ((New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/yjy66630/nvimdots/HEAD/scripts/install.ps1'))
 ```
 
 - **\*nix**
 
 ```sh
 if command -v curl >/dev/null 2>&1; then
-    bash -c "$(curl -fsSL https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.sh)"
+    bash -c "$(curl -fsSL https://raw.githubusercontent.com/yjy66630/nvimdots/HEAD/scripts/install.sh)"
 else
-    bash -c "$(wget -O- https://raw.githubusercontent.com/ayamir/nvimdots/HEAD/scripts/install.sh)"
+    bash -c "$(wget -O- https://raw.githubusercontent.com/yjy66630/nvimdots/HEAD/scripts/install.sh)"
 fi
 ```
 
@@ -122,63 +98,60 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 </h3>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/startuptime.png"
+  <img src="https://github.com/yjy66630/nvimdots/assets/62711034/7dd42d94-26c1-46d3-b400-588925940a1c"
   width = "80%"
   alt = "StartupTime"
   />
 </p>
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/vimstartup.png"
-  width = "60%"
-  alt = "Vim-StartupTime"
-  />
-</p>
-
-> Tested with [rhysd/vim-startuptime](https://github.com/rhysd/vim-startuptime)
 
 <h3 align="center">
     📸 Screenshots
 </h3>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/dashboard.png" alt="Dashboard">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/6557f0a8-4989-4730-b558-2a2babc80093" alt="Dashboard">
     <em>Dashboard</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/telescope.png" alt="Telescope">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/e7edeb41-8334-40e3-b581-be36059fb345" alt="Telescope">
     <em>Telescope</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/coding.png" alt="Coding">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/f4333982-a367-4a4b-a412-665de68549a5" alt="Coding">
     <em>Coding</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/code_action.png" alt="Code Action">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/db2997b1-354d-4dfb-b94f-709c46566a00" alt="Code Action">
     <em>Code Action</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/dap.png" alt="Debugging">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/d9bdaa4b-a5d6-49fb-b5aa-f12ace39a7e1" alt="Debugging">
     <em>Debugging</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/lazygit.png" alt="Lazygit">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/10382522-49c2-4e8f-8975-e36ab35f16d2" alt="CMakeTools">
+    <em>CMakeTools</em>
+</p>
+<br>
+
+<p align="center">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/44424332-df5e-4d6c-94c2-8a1b82e30224" alt="Lazygit">
     <em>Lazygit with built-in Terminal</em>
 </p>
 <br>
 
 <p align="center">
-    <img src="https://raw.githubusercontent.com/ayamir/blog-imgs/main/command_ref.png" alt="Command quickref">
+    <img src="https://github.com/yjy66630/nvimdots/assets/62711034/118cfd35-896d-46d6-b451-0a65c40f3723" alt="Command quickref">
     <em>Command quickref</em>
 </p>
 
@@ -191,12 +164,6 @@ It's strongly recommended to read [Wiki: Prerequisites](https://github.com/ayami
 ## ❤️ Thanks to
 
 - [ayamir](https://github.com/ayamir)
-- [Jint-lzxy](https://github.com/Jint-lzxy)
-- [CharlesChiuGit](https://github.com/CharlesChiuGit)
-
-## 🎉 Acknowledgement
-
-- [glepnir/nvim](https://github.com/glepnir/nvim)
 
 ## 📜 License
 
@@ -206,5 +173,3 @@ This NeoVim configuration is released under the MIT license, which grants the fo
 - Distribution
 - Modification
 - Private use
-
-For more convoluted language, see the [LICENSE](https://github.com/ayamir/nvimdots/blob/main/LICENSE).
