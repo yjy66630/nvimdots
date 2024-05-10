@@ -26,5 +26,6 @@ return function()
 	vim.cmd [[hi LspInlayHint guifg=#d8d8d8 guibg=#3a3a3a]]
 
 	vim.api.nvim_command([[LspStart]]) -- Start LSPs
+-- 	vim.lsp.set_log_level("debug")
 	vim.lsp.set_log_level("off")
 end

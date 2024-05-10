@@ -67,11 +67,11 @@ ui["lukas-reineke/headlines.nvim"] = {
 	dependencies = "nvim-treesitter/nvim-treesitter",
 	config = require("ui.headlines"),
 }
-ui["sainnhe/edge"] = { 
+ui["sainnhe/edge"] = {
  	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
 	config = require("ui.edge"),
- } 
+ }
  ui["folke/zen-mode.nvim"] = {
  	lazy = true,
 	event = { "BufReadPost", "BufAdd", "BufNewFile" },

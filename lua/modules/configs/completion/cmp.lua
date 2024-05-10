@@ -147,7 +147,7 @@ return function()
 					buffer = "[BUF]",
 					orgmode = "[ORG]",
 					nvim_lsp = "[LSP]",
-					nvim_lua = "[LUA]",
+-- 					nvim_lua = "[LUA]",
 					path = "[PATH]",
 					tmux = "[TMUX]",
 					treesitter = "[TS]",
