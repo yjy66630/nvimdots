@@ -10,7 +10,6 @@ ui["akinsho/bufferline.nvim"] = {
 	lazy = true,
 -- 	event = { "BufReadPost", "BufAdd", "BufNewFile" },
 	event = {"VeryLazy"},
-	tag = "v4.5.2",
 	config = require("ui.bufferline"),
 }
 ui["j-hui/fidget.nvim"] = {
