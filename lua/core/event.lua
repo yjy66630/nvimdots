@@ -40,6 +40,21 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
+-- only enable inlay_hint in normal, command and line visual mode
+-- because cursor move in inlay_hint dazzling
+vim.api.nvim_create_autocmd("ModeChanged", {
+    pattern = "*",
+    callback = function()
+        if vim.api.nvim_get_mode().mode == 'n' or
+           vim.api.nvim_get_mode().mode == 'c' or
+           vim.api.nvim_get_mode().mode == 'V' then
+            vim.lsp.inlay_hint.enable(true)
+        else
+            vim.lsp.inlay_hint.enable(false)
+        end
+    end
+})
+
 -- auto close some filetype with <q>
 vim.api.nvim_create_autocmd("FileType", {
 	pattern = {
