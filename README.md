@@ -21,8 +21,7 @@ Branch info:
 
 | Branch | Supported neovim version |
 | :----: | :----------------------: |
-|  main  |       nvim 0.10 dev      |
-|  main   |         nvim 0.9        |
+|  main  |          nvim 0.10       |
 
 </div>
 
