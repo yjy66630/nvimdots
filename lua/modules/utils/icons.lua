@@ -79,6 +79,7 @@ local data = {
 		BigCircle = "",
 		BigUnfilledCircle = "",
 		BookMark = "󰃃",
+		Buffer = "󰓩",
 		Bug = "",
 		Calendar = "",
 		Check = "󰄳",
@@ -132,6 +133,7 @@ local data = {
 		Tab = "",
 		Table = "",
 		Telescope = "",
+		Window = "",
 	},
 	diagnostics = {
 		Error = "",
