@@ -1,0 +1,133 @@
+// 将键绑定放在此文件中以覆盖默认值
+[
+    {
+        "key": "ctrl+alt+l",
+        "command": "editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+shift+i",
+        "command": "-editor.action.formatDocument",
+        "when": "editorHasDocumentFormattingProvider && editorTextFocus && !editorReadonly && !inCompositeEditor"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "ctrl+1",
+        "command": "-workbench.action.focusFirstEditorGroup"
+    },
+    {
+        "key": "left",
+        "command": "previousCompressedFolder",
+        "when": "explorerViewletCompressedFocus && filesExplorerFocus && foldersViewVisible && !explorerViewletCompressedFirstFocus && !inputFocus"
+    },
+    {
+        "key": "left",
+        "command": "-previousCompressedFolder",
+        "when": "explorerViewletCompressedFocus && filesExplorerFocus && foldersViewVisible && !explorerViewletCompressedFirstFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.openRecent"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.reloadWindow",
+        "when": "isDevelopment"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.quickOpenNavigateNextInRecentFilesPicker",
+        "when": "inQuickOpen && inRecentFilesPicker"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-python.refreshTensorBoard",
+        "when": "python.hasActiveTensorBoardSession"
+    },
+    {
+        "key": "ctrl+r",
+        "command": "-workbench.action.terminal.runRecentCommand",
+        "when": "accessibilityModeEnabled && terminalFocus && terminalHasBeenCreated || accessibilityModeEnabled && terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "tab",
+        "command": "-acceptSelectedSuggestion",
+        "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+    },
+    {
+        "key": "enter",
+        "command": "-acceptSelectedSuggestionOnEnter"
+    },
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "ctrl+down",
+        "command": "-selectNextSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "ctrl+up",
+        "command": "-selectPrevSuggestion",
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+    },
+    {
+        "key": "tab",
+        "command": "-workbench.action.terminal.acceptSelectedSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "enter",
+        "command": "-workbench.action.terminal.acceptSelectedSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "tab",
+        "command": "workbench.action.terminal.selectNextSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "down",
+        "command": "-workbench.action.terminal.selectNextSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "shift+tab",
+        "command": "workbench.action.terminal.selectPrevSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "up",
+        "command": "-workbench.action.terminal.selectPrevSuggestion",
+        "when": "terminalFocus && terminalHasBeenCreated && terminalIsOpen && terminalSuggestWidgetVisible || terminalFocus && terminalIsOpen && terminalProcessSupported && terminalSuggestWidgetVisible"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "-cmake.debugTarget",
+        "when": "cmake:enableFullFeatureSet && inCMakeProject && !cmake:hideDebugCommand && !inDebugMode"
+    },
+    {
+        "key": "ctrl+f5",
+        "command": "cmake.projectStatus.debugTarget"
+    },
+    {
+        "key": "alt+l",
+        "command": "cursorWordEndRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "alt+h",
+        "command": "cursorWordLeft",
+        "when": "textInputFocus"
+    }
+]

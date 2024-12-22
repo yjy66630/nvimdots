@@ -1,0 +1,38 @@
+/* comments */
+#preview code {
+  background-color: blue;
+}
+
+/* airline mock */
+:root {
+  --asvetliakov-insert: #BF616A;
+  --asvetliakov-normal: #808080;
+  --asvetliakov-visual: #B48EAD;
+  --asvetliakov-visual-block: #A3BE8C;
+  --asvetliakov-visual-line: #bf1dce;
+  --asvetliakov-replace: #D08770;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- INSERT --"]) {
+  background-color: var(--asvetliakov-insert) !important;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- NORMAL --"]) {
+  background-color: var(--asvetliakov-normal) !important;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- VISUAL --"]) {
+  background-color: var(--asvetliakov-visual) !important;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- VISUAL LINE --"]) {
+  background-color: var(--asvetliakov-visual-line) !important;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- VISUAL BLOCK --"]) {
+  background-color: var(--asvetliakov-visual-block) !important;
+}
+
+.part.statusbar.status-border-top:has([aria-label*="-- REPLACE --"]) {
+  background-color: var(--asvetliakov-replace) !important;
+}

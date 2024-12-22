@@ -1,0 +1,514 @@
+{
+    "cmake.pinnedCommands": [
+        "workbench.action.tasks.configureTaskRunner",
+        "workbench.action.tasks.runTask"
+    ],
+    "editor.fontSize": 16,
+    "editor.fontFamily": "'Jetbrains Mono'",
+    "cmake.generator": "Ninja",
+    "cmake.buildDirectory": "${workspaceFolder}/cmake-build-debug",
+    "explorer.confirmDelete": false,
+    "editor.scrollbar.vertical": "visible",
+    "workbench.colorCustomizations": {
+        "sideBar.background": "#61494000",
+        "sideBarSectionHeader.background": "#61494000",
+        "activityBar.background": "#61494000",
+        "statusBar.background": "#69b6ce",
+        "statusBar.noFolderBackground": "#B48EAD",
+        "statusBar.debuggingBackground": "#B48EAD",
+        "statusBar.foreground": "#434C5E",
+        "statusBar.debuggingForeground": "#434C5E",
+        "scrollbarSlider.background": "#F9826C",
+        "scrollbarSlider.hoverBackground": "#ff6d54",
+        "scrollbarSlider.activeBackground": "#f85134",
+        "tab.activeBorder": "#F9826C",
+        "tab.activeBorderTop": "#F9826C",
+        "tab.activeForeground": "#f97159",
+        "tab.hoverBackground": "#444D56",
+        "editorInlayHint.parameterBackground": "#2A3036",
+        "editorInlayHint.parameterForeground": "#F9FADE",
+        "editor.lineHighlightBackground": "#2B3036",
+        "editor.focusedStackFrameHighlightBackground": "#176F2C",
+        "editor.stackFrameHighlightBackground": "#176F2C",
+        "editorCursor.foreground": "#ffc600"
+    },
+    "editor.smoothScrolling": true,
+    "workbench.list.smoothScrolling": true,
+    "terminal.integrated.smoothScrolling": true,
+    "output.smartScroll.enabled": false,
+    "files.autoSave": "onFocusChange",
+    "editor.wordWrap": "wordWrapColumn",
+    "editor.fontLigatures": true,
+    "editor.formatOnPaste": true,
+    "editor.cursorBlinking": "smooth",
+    "editor.formatOnType": true,
+    "editor.copyWithSyntaxHighlighting": false,
+    "editor.stickyTabStops": true,
+    "editor.wordBasedSuggestions": "off",
+    "editor.linkedEditing": true,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "files.autoGuessEncoding": true,
+    "workbench.editor.wrapTabs": true,
+    "explorer.confirmDragAndDrop": false,
+    "window.menuBarVisibility": "visible",
+    "window.dialogStyle": "custom",
+    "debug.showBreakpointsInOverviewRuler": true,
+    "debug.toolBarLocation": "docked",
+    "debug.openDebug": "openOnSessionStart",
+    "editor.wordWrapColumn": 120,
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.showSpace": true,
+    "python.analysis.inlayHints.callArgumentNames": "all",
+    "python.analysis.inlayHints.functionReturnTypes": true,
+    "python.analysis.inlayHints.pytestParameters": true,
+    "javascript.inlayHints.enumMemberValues.enabled": true,
+    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "javascript.inlayHints.parameterNames.enabled": "all",
+    "javascript.inlayHints.parameterTypes.enabled": true,
+    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "javascript.inlayHints.variableTypes.enabled": true,
+    "typescript.inlayHints.enumMemberValues.enabled": true,
+    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
+    "typescript.inlayHints.parameterTypes.enabled": true,
+    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
+    "typescript.inlayHints.variableTypes.enabled": true,
+    "cmake.showOptionsMovedNotification": false,
+    "editor.formatOnSave": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Mozilla, IndentWidth: 4, AccessModifierOffset: -4, AlignAfterOpenBracket: Align, AlignConsecutiveAssignments: None, AlignConsecutiveDeclarations: None, AlignConsecutiveMacros: Consecutive, AlignEscapedNewlines: Right, AlignOperands: Align, AlignTrailingComments: true, AllowAllArgumentsOnNextLine: true, AllowAllConstructorInitializersOnNextLine: true, AllowAllParametersOfDeclarationOnNextLine: true, AllowShortBlocksOnASingleLine: Empty, AllowShortCaseLabelsOnASingleLine: true, AllowShortFunctionsOnASingleLine: Inline, AllowShortIfStatementsOnASingleLine: true, AllowShortLoopsOnASingleLine: true, AlwaysBreakAfterDefinitionReturnType: All, AlwaysBreakAfterReturnType: None, AlwaysBreakBeforeMultilineStrings: false, AlwaysBreakTemplateDeclarations: MultiLine, BinPackArguments: false, BinPackParameters: true, BreakBeforeBinaryOperators: None, BreakBeforeTernaryOperators: true, BreakConstructorInitializersBeforeComma: false, BreakConstructorInitializers: AfterColon, ColumnLimit: 100, CompactNamespaces: false, ConstructorInitializerAllOnOneLineOrOnePerLine: true, ConstructorInitializerIndentWidth: 4, ContinuationIndentWidth: 4, Cpp11BracedListStyle: true, DerivePointerAlignment: false, DisableFormat: false, ExperimentalAutoDetectBinPacking: false, FixNamespaceComments: true, IndentCaseLabels: true, IndentPPDirectives: AfterHash, IndentWrappedFunctionNames: false, KeepEmptyLinesAtTheStartOfBlocks: false, MacroBlockBegin: '', MacroBlockEnd: '', MaxEmptyLinesToKeep: 10, ObjCBlockIndentWidth: 4, PenaltyBreakComment: 300, PenaltyBreakFirstLessLess: 120, PenaltyBreakString: 1000, PenaltyExcessCharacter: 1000000, PenaltyReturnTypeOnItsOwnLine: 120, PointerAlignment: Left, ReflowComments: true, SortUsingDeclarations: false, SpaceAfterCStyleCast: false, SpaceAfterLogicalNot: false, SpaceAfterTemplateKeyword: false, SpaceBeforeAssignmentOperators: true, SpaceBeforeParens: ControlStatements, SpaceBeforeRangeBasedForLoopColon: true, SpaceBeforeSquareBrackets: false, SpaceInEmptyParentheses: false, SpacesBeforeTrailingComments: 3, SpacesInAngles: false, SpacesInContainerLiterals: false, SpacesInCStyleCastParentheses: false, SpacesInConditionalStatement: false, SpacesInParentheses: false, SpacesInSquareBrackets: false, Standard: Auto, TabWidth: 4, UseTab: Never}",
+    "C_Cpp.formatting": "clangFormat",
+    "C_Cpp.clang_format_path": "/usr/bin/clang-format",
+    "C_Cpp.doxygen.generatedStyle": "//!",
+    "commentTranslate.multiLineMerge": true,
+    "commentTranslate.targetLanguage": "zh-CN",
+    "commentTranslate.source": "Bing",
+    "C_Cpp.autocompleteAddParentheses": true,
+    "python.analysis.completeFunctionParens": true,
+    // vim
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+        // 命令面板
+        {
+            "before": [
+                ":"
+            ],
+            "commands": [
+                "workbench.action.showCommands",
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "<C-n>"
+            ],
+            "commands": [
+                ":nohl"
+            ]
+        },
+        {
+            "before": [
+                "<space>",
+                "j"
+            ],
+            "commands": [
+                "workbench.action.gotoLine"
+            ]
+        },
+        //////////////////////// lsp
+        {
+            "before": [
+                "g",
+                "o"
+            ],
+            "commands": [
+                "workbench.action.gotoSymbol"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "r"
+            ],
+            "commands": [
+                "editor.action.rename"
+            ]
+        },
+        ///////////////////////// tabs
+        {
+            "before": [
+                "t",
+                "p"
+            ],
+            "commands": [
+                "workbench.action.previousEditor"
+            ]
+        },
+        {
+            "before": [
+                "t",
+                "n"
+            ],
+            "commands": [
+                "workbench.action.nextEditor"
+            ]
+        },
+        {
+            "before": [
+                "t",
+                "q"
+            ],
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        },
+        //////////////////////// diagnostic
+        {
+            "before": [
+                "g",
+                "]"
+            ],
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ],
+            "silent": true
+        },
+        {
+            "before": [
+                "g",
+                "t"
+            ],
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ],
+            "silent": true
+        },
+        //////////////////// 书签相关
+        {
+            "before": [
+                "m",
+                "m"
+            ],
+            "commands": [
+                "bookmarks.toggle"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "p"
+            ],
+            "commands": [
+                "bookmarks.jumpToPrevious"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "n"
+            ],
+            "commands": [
+                "bookmarks.jumpToNext"
+            ]
+        },
+        {
+            "before": [
+                "m",
+                "l"
+            ],
+            "commands": [
+                "bookmarks.list"
+            ]
+        },
+        // H、L
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        },
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showDefinitionPreviewHover"
+            ]
+        },
+        {
+            "before": [
+                "<C-s>"
+            ],
+            "commands": [
+                {
+                    "command": "workbench.action.files.save"
+                },
+                {
+                    "command": "extension.vim_escape"
+                }
+            ]
+        }
+    ],
+    "vim.operatorPendingModeKeyBindings": [
+        {
+            "before": [
+                "L"
+            ],
+            "after": [
+                "$"
+            ]
+        },
+        {
+            "before": [
+                "H"
+            ],
+            "after": [
+                "^"
+            ]
+        }
+    ],
+    "vim.visualModeKeyBindings": [
+        {
+            "before": [
+                ">"
+            ],
+            "commands": [
+                "editor.action.indentLines"
+            ]
+        },
+        {
+            "before": [
+                "<"
+            ],
+            "commands": [
+                "editor.action.outdentLines"
+            ]
+        },
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-g>": false,
+        "<C-p>": false,
+        "<C-f>": false
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+        "asvetliakov.vscode-neovim": 1
+    },
+    "vim.highlightedyank.enable": true,
+    "vim.statusBarColorControl": true,
+    "vim.statusBarColors.normal": [
+        "#8FBCBB",
+        "#434C5E"
+    ],
+    "vim.statusBarColors.insert": "#BF616A",
+    "vim.statusBarColors.visual": "#B48EAD",
+    "vim.statusBarColors.visualline": "#B48EAD",
+    "vim.statusBarColors.visualblock": "#A3BE8C",
+    "vim.statusBarColors.replace": "#D08770",
+    "vim.statusBarColors.commandlineinprogress": "#007ACC",
+    "vim.statusBarColors.searchinprogressmode": "#007ACC",
+    "vim.statusBarColors.easymotionmode": "#007ACC",
+    "vim.statusBarColors.easymotioninputmode": "#007ACC",
+    "vim.statusBarColors.surroundinputmode": "#007ACC",
+    "vim.surround": true,
+    "vim.smartRelativeLine": true,
+    "vim.argumentObjectClosingDelimiters": [
+        ")",
+        "]",
+        ">"
+    ],
+    "vim.argumentObjectOpeningDelimiters": [
+        "(",
+        "[",
+        "<"
+    ],
+    "debug.console.fontSize": 16,
+    "terminal.integrated.fontSize": 16,
+    "scm.inputFontSize": 16,
+    "markdown.preview.fontSize": 16,
+    "chat.editor.fontSize": 16,
+    "[cpp]": {
+        "editor.defaultFormatter": "xaver.clang-format"
+    },
+    "files.insertFinalNewline": true,
+    "notebook.insertFinalNewline": true,
+    "telemetry.telemetryLevel": "error",
+    "code-runner.enableAppInsights": false,
+    "editor.gotoLocation.alternativeDefinitionCommand": "editor.action.revealDeclaration",
+    "editor.unfoldOnClickAfterEndOfLine": true,
+    "workbench.tree.indent": 20,
+    "diffEditor.experimental.showMoves": true,
+    "files.exclude": {
+        "**/.cache": true,
+        "**/.idea": true
+    },
+    "cmake.ctestDefaultArgs": [
+        "-T",
+        "test",
+        "--output-on-failure",
+        "--timeout",
+        "5",
+        "--extra-verbose"
+    ],
+    "apc.electron": {
+        "titleBarStyle": "hiddenInset",
+        "backgroundColor": "rgba(61,61,61, 1)",
+        "vibrancy": "sidebar",
+        "visualEffectState": "active",
+        "trafficLightPosition": {
+            "x": 12,
+            "y": 10
+        }
+    },
+    "workbench.activityBar.location": "top",
+    "apc.activityBar": {
+        // "position": "left",
+        "size": 40, // height when positioned at top/bottom, width in the default position
+        "itemSize": 20,
+        // "itemMargin": 3 // the margin between two items, defaults to `3`
+    },
+    "apc.statusBar": {
+        "position": "editor-bottom",
+    },
+    "apc.stylesheet": {
+        ".monaco-workbench .part.commandPalette": {
+            "position": "fixed",
+            "top": "10px", // Adjust to desired position
+            "right": "10px", // Adjust to desired position
+            "background-color": "#00000000" // Transparent background
+        },
+        /* Change Breakpoint Size */
+        ".cgmr.codicon.codicon.codicon-debug-breakpoint.codicon.codicon-debug-stackframe": {
+            "font-size": "25px",
+        },
+        ".cgmr.codicon.codicon.codicon-debug-breakpoint": {
+            "font-size": "20px",
+        }, /* Ensure the scrollbar is always visible */
+        ".monaco-scrollable-element .invisible.scrollbar.vertical.fade": {
+            "visibility": "visible !important", /* Ensure the scrollbar is visible */
+            "opacity": "1 !important", /* Ensure the scrollbar is fully opaque */
+        }
+    },
+    "apc.imports": [
+        "${userHome}/.config/Code/User/status-bar.css",
+        "${userHome}/AppData/Roaming/Code/User/status-bar.css",
+        "${userHome}/.config/Code/User/resize-quickinput-widget.js",
+        "${userHome}/AppData/Roaming/Code/User/resize-quickinput-widget.js",
+        "${userHome}/.config/Code/User/status-bar.js",
+        "${userHome}/AppData/Roaming/Code/User/status-bar.js",
+    ],
+    "window.titleBarStyle": "native",
+    "workbench.colorTheme": "GitHub Dark",
+    "editor.lineHeight": 1.5,
+    "editor.letterSpacing": 0.5,
+    "files.simpleDialog.enable": true,
+    "search.searchEditor.reusePriorSearchConfiguration": true,
+    "search.searchEditor.defaultNumberOfContextLines": 2,
+    "terminal.integrated.commandsToSkipShell": [
+        "matlab.interrupt"
+    ],
+    "[matlab]": {
+        "editor.defaultFormatter": "AffenWiesel.matlab-formatter"
+    },
+    "vscode-neovim.compositeKeys": {
+        "jj": {
+            "command": "vscode-neovim.escape",
+        },
+    },
+    "vscode-neovim.logOutputToConsole": true,
+    "vscode-neovim.ctrlKeysForInsertMode": [
+        "c",
+        "d",
+        "h",
+        "j",
+        "m",
+        "o",
+        "r",
+        "t",
+        "u",
+        "w"
+    ],
+    "vscode-neovim.ctrlKeysForNormalMode": [
+        "a",
+        "b",
+        "d",
+        "e",
+        "i",
+        "h",
+        "j",
+        "k",
+        "l",
+        "m",
+        "n",
+        "o",
+        "r",
+        "t",
+        "u",
+        "v",
+        "w",
+        "x",
+        "y",
+        "/",
+        "]",
+        "right",
+        "left",
+        "up",
+        "down",
+        "backspace",
+        "delete"
+    ],
+    "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+    "[lua]": {
+        "editor.defaultFormatter": "yinfei.luahelper"
+    },
+    "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim",
+    "window.customTitleBarVisibility": "auto",
+    "editor.stickyScroll.enabled": false,
+    "security.workspace.trust.untrustedFiles": "open",
+}
