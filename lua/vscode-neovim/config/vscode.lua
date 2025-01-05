@@ -131,10 +131,10 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", {
 })
 
 -- add blank line
-vim.keymap.set("n", "<C-j>", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", {
+vim.keymap.set("n", "<leader>[", ":set paste<CR>m`o<Esc>``:set nopaste<CR>", {
     desc = "Add blank line below"
 })
-vim.keymap.set("n", "<C-k>", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", {
+vim.keymap.set("n", "<leader>]", ":set paste<CR>m`O<Esc>``:set nopaste<CR>", {
     desc = "Add blank line above"
 })
 
@@ -151,7 +151,10 @@ vim.keymap.set("n", "<leader>rr", vscode_action("cmake.launchTarget"), {
     desc = "CMake: Run Target"
 })
 
-vim.keymap.set("n", "<leader>rd", vscode_action("cmake.debugTarget"), {
+vim.keymap.set("n", "<leader>rd", function()
+    vscode.action("workbench.action.debug.stop")
+    vscode.action("cmake.debugTarget")
+end, {
     desc = "CMake: Debug Target"
 })
 
@@ -159,8 +162,54 @@ vim.keymap.set("n", "<leader>da", vscode_action("editor.debug.action.toggleBreak
     desc = "Toggle Breakpoint"
 })
 
+vim.keymap.set("n", "<leader>dc", vscode_action("editor.debug.action.conditionalBreakpoint"), {
+    desc = "Toggle Conditional Breakpoint"
+})
+
+vim.keymap.set("n", "<leader>dn", function()
+    vscode.action("editor.debug.action.goToNextBreakpoint")
+    vscode.action("cancelSelection")
+end, {
+    desc = "Goto Next Breakpoint"
+})
+
+vim.keymap.set("n", "<leader>dp", function()
+    vscode.action("editor.debug.action.goToPreviousBreakpoint")
+    vscode.action("cancelSelection")
+end, {
+    desc = "Goto Previous Breakpoint"
+})
+vim.keymap.set("v", "<leader>dn", function()
+    vscode.action("editor.debug.action.goToNextBreakpoint")
+    vscode.action("cancelSelection")
+end, {
+    desc = "Goto Next Breakpoint"
+})
+
+vim.keymap.set("v", "<leader>dp", function()
+    vscode.action("editor.debug.action.goToPreviousBreakpoint")
+    vscode.action("cancelSelection")
+end, {
+    desc = "Goto Previous Breakpoint"
+})
+
 -- sidebar
 vim.keymap.set("n", "<C-n>", vscode_action("workbench.action.toggleSidebarVisibility"), {
     desc = "Toggle Sidebar"
 })
 
+-- refactor
+vim.keymap.set({"n", "x"}, "<leader>gf", function()
+    vscode.with_insert(function()
+        vscode.action("editor.action.refactor")
+    end)
+end)
+
+-- trouble
+vim.keymap.set("n", "t]", vscode_action("editor.action.marker.nextInFiles"), {
+    desc = "Next trouble"
+})
+
+vim.keymap.set("n", "t[", vscode_action("editor.action.marker.prevInFiles"), {
+    desc = "Previous trouble"
+})
