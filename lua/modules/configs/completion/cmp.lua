@@ -78,8 +78,6 @@ return function()
 	local use_copilot = require("core.settings").use_copilot
 	local comparators = use_copilot == true
 			and {
-				require("copilot_cmp.comparators").prioritize,
-				require("copilot_cmp.comparators").score,
 				-- require("cmp_tabnine.compare"),
 				compare.offset, -- Items closer to cursor will have lower priority
 				compare.exact,

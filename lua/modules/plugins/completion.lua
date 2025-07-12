@@ -85,19 +85,4 @@ completion["Fildo7525/pretty_hover"] = {
 	config = require("completion.pretty_hover"),
 }
 
-if use_copilot then
-	completion["zbirenbaum/copilot.lua"] = {
-		lazy = true,
-		cmd = "Copilot",
-		event = "InsertEnter",
-		config = require("completion.copilot"),
-		dependencies = {
-			{
-				"zbirenbaum/copilot-cmp",
-				config = require("completion.copilot-cmp"),
-			},
-		},
-	}
-end
-
 return completion
